@@ -21,17 +21,5 @@ Windows 10:<br>
 This isolates all `pip` or `conda` installs from your other environments or from your system-level Python installation.
 
 ### Install packages
-Ensure the `drl` environment is activated, then:<br>
-`pip install gym`<br>
-<br>
-Ubuntu:<br>
-`conda install pytorch-cpu torchvision -c pytorch`<br>
-<br>
-MacOS:<br>
-`conda install pytorch torchvision -c pytorch`<br> 
-<br>
-Windows 10:<br>
-`conda install -c peterjc123 pytorch-cpu`<br>
-<br>
-We will also install ipython and a few other support packages. If you activated the `drl` environment, this will not touch your existing installations.<br>
-`pip install ipython ipdb`
+Ensure the `imv` environment is activated, then:<br>
+`conda install -c conda-forge opencv`<br>
