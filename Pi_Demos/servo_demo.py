@@ -36,16 +36,8 @@ def main():
 		tilt_pos = random.randint(TILT_MIN_POS, TILT_MAX_POS)
 		pan_pos = random.randint(PAN_MIN_POS, PAN_MAX_POS)
 
-		# make sure the servos also in the range 
-		if tilt_pos > TILT_MIN_POS and tilt_pos < TILT_MAX_POS:
-			servo.do_pan(tilt_pos)
-		else:
-			servo.do_pan(150)
-		
-		if pan_pos > PAN_MIN_POS and pan_pos < PAN_MAX_POS:
-			servo.do_tilt(pan_pos)
-		else:
-			servo.do_tilt(150)
+		servo.do_tilt(tilt_pos)
+		servo.do_pan(pan_pos)
 
 		time.sleep(2)
 
