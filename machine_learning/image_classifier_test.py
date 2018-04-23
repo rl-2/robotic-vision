@@ -1,3 +1,16 @@
+#==========================================================================  
+# A Basic Image Classifier -- testing part
+# 
+# The code was adapted from PyTorch.org
+# http://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html
+# 
+# The code initially served for UCSB ART185 Intelligent Machine Vision
+#
+# Authors: Jieliang (Rodger) Luo
+#
+# April 22nd, 2018
+#==========================================================================
+
 import torch
 import torchvision
 import torchvision.transforms as transforms
@@ -42,6 +55,7 @@ if img.width < img.height:
 else:
 	crop_size = img.height
 
+# image processing to make it readable for torch
 preprocess = transforms.Compose([
 	transforms.CenterCrop(crop_size),
 	transforms.Resize(32),
@@ -49,7 +63,7 @@ preprocess = transforms.Compose([
 	transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
 ])
 
-img_tensor = preprocess(img).unsqueeze(0)
+img_tensor = preprocess(img).unsqueeze(0) # add batch dim 
 outputs = model(Variable(img_tensor))
 
 print(outputs)

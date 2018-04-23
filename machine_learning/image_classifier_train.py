@@ -1,5 +1,5 @@
 #==========================================================================  
-# A Basic Image Classifier
+# A Basic Image Classifier -- training part 
 # 
 # The code was adapted from PyTorch.org
 # http://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html
