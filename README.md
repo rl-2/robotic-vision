@@ -23,3 +23,16 @@ This isolates all `pip` or `conda` installs from your other environments or from
 ### Install packages
 Ensure the `imv` environment is activated, then:<br>
 `conda install -c conda-forge opencv`<br>
+
+Ensure the drl environment is activated, then:<br>
+pip install gym py-getch<br>
+
+Ubuntu:<br>
+conda install pytorch-cpu torchvision -c pytorch<br>
+
+MacOS:<br>
+conda install pytorch torchvision -c pytorch<br>
+
+Windows 10:<br>
+conda install -c peterjc123 pytorch-cpu<br>
+pip install torchvision<br>
